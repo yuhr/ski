@@ -18,9 +18,10 @@
   
   (display (format "Downloading ~a ...\n" ski:trick))
   (system (format "cd ~a; git clone https://github.com/arcfide/chez-srfi.git" ski:dir-resort))
-  (load (format "~a/chez-srfi/link-dirs.chezscheme.sps" ski:dir-resort))
   
   (display (format "Linking ~a ...\n" ski:trick))
+  (current-directory "chez-srfi")
+  (load (format "~a/chez-srfi/link-dirs.chezscheme.sps" ski:dir-resort))
   (system (format "ln -sf ~a/~a ~a/~a" ski:dir-resort ski:dir-dist ski:dir-tricks ski:trick))
   
   (display (format "~a OK\n" ski:trick)))
