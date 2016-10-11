@@ -9,10 +9,6 @@
 
 ;;; dont rename symbols defined below =============================================================
 
-;; unused
-(define ski:tricks-required '((rnrs)))
-; depended by this package.
-
 (define (ski:install)
   ; setup some stuff and create symlink in the tricks directory.
   ; The name of the link will be used as the first name used in import forms, e.g.
