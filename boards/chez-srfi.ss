@@ -16,10 +16,14 @@
   ; (import (symlink-to-dir-name subdir-name libfile-name)) or simply you can
   ; (import (symlink-to-libfile-name)).
   
+  (display (format "Downloading ~a ...\n" ski:trick))
+  (system (format "cd ~a; git clone https://github.com/arcfide/chez-srfi.git" ski:dir-resort))
+  (load (format "~a/chez-srfi/link-dirs.chezscheme.sps" ski:dir-resort))
+  
   (display (format "Linking ~a ...\n" ski:trick))
   (system (format "ln -sf ~a/~a ~a/~a" ski:dir-resort ski:dir-dist ski:dir-tricks ski:trick))
   
-  (display "yeah\n"))
+  (display (format "~a OK\n" ski:trick)))
 
 (define (ski:unbind)
   ; means uninstall. cleanup the package's directory and the associated symlink.
