@@ -23,7 +23,7 @@
   (let ((s (if (symbol? board)
                (symbol->string board)
                board)))
-    (load (format "~a/~a.ss" ski-dir-boards s))
+    (load (format "~a/~a.ss" ski:dir-boards s))
     (ski:uninstall)
     (system (format "rm ~a/~a.ss" ski:dir-boards s))))
 

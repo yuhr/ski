@@ -34,7 +34,7 @@
   (system (format "unlink ~a/~a" ski:dir-tricks ski:trick))
   
   (display (format "Deleting ~a\n" ski:dist))
-  (system (format "rm -r ~a/~a" ski:dir-resort))
+  (system (format "rm -r ~a/~a" ski:dir-resort ski:dist))
   
   (display (format "~a GONE" ski:trick)))
 
