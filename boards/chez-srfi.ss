@@ -7,6 +7,9 @@
 (define ski:dist "chez-srfi")
 ; means the name of the distribution directory.
 
+;;; dont rename symbols defined below =============================================================
+
+;; unused
 (define ski:tricks-required '((rnrs)))
 ; depended by this package.
 

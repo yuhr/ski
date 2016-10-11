@@ -10,5 +10,5 @@ install:
 	cp -f *.ss $(DIRINSTALL)
 
 uninstall:
-	rm -r $(DIRINSTALL) $(DIRTRICKS) $(DIRDISTS) $(DIRREGIS)
+	rm -rf $(DIRINSTALL) $(DIRTRICKS) $(DIRDISTS) $(DIRREGIS)
 
