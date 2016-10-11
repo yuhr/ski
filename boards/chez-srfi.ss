@@ -20,7 +20,7 @@
   (system (format "cd ~a; git clone https://github.com/arcfide/chez-srfi.git" ski:dir-resort))
   
   (display (format "Linking ~a ...\n" ski:trick))
-  (current-directory "chez-srfi")
+  (current-directory (format "~a/chez-srfi" ski:dir-resort))
   (load (format "~a/chez-srfi/link-dirs.chezscheme.sps" ski:dir-resort))
   (system (format "ln -sf ~a/~a ~a/~a" ski:dir-resort ski:dir-dist ski:dir-tricks ski:trick))
   
