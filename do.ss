@@ -3,27 +3,27 @@
 
 (define ski:dir-resort "~/.ski/resort")
 (define ski:dir-tricks "~/.ski/tricks")
-(define ski:dir-boards "~/.ski/boards")
+(define ski:dir-skies "~/.ski/skies")
 
 (library-directories `(,@(library-directories)
                        (,ski:dir-tricks . ,ski:dir-tricks)))
 (source-directories `(,@(source-directories)
                       ,ski:dir-tricks))
 
-(define (ski:bind board)
-  (let ((s (if (symbol? board)
-               (symbol->string board)
-               board)))
-    (system (format "cd ~a; wget https://github.com/qothr/ski/raw/master/boards/~a.ss"
-                    ski:dir-boards s))
-    (load (format "~a/~a.ss" ski:dir-boards s))
+(define (ski:bind ski)
+  (let ((s (if (symbol? ski)
+               (symbol->string ski)
+               ski)))
+    (system (format "cd ~a; wget https://github.com/qothr/ski/raw/master/skies/~a.ss"
+                    ski:dir-skies s))
+    (load (format "~a/~a.ss" ski:dir-skies s))
     (ski:install)))
 
-(define (ski:unbind board)
-  (let ((s (if (symbol? board)
-               (symbol->string board)
-               board)))
-    (load (format "~a/~a.ss" ski:dir-boards s))
+(define (ski:unbind ski)
+  (let ((s (if (symbol? ski)
+               (symbol->string ski)
+               ski)))
+    (load (format "~a/~a.ss" ski:dir-ski s))
     (ski:uninstall)
-    (system (format "rm ~a/~a.ss" ski:dir-boards s))))
+    (system (format "rm ~a/~a.ss" ski:dir-ski s))))
 
