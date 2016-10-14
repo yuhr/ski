@@ -7,8 +7,6 @@
 (define ski:dist "chez-srfi")
 ; means the name of the distribution directory.
 
-;;; dont rename symbols defined below =============================================================
-
 (define (ski:install)
   ; setup some stuff and create symlink in the tricks directory.
   ; The name of the link will be used as the first name used in import forms, e.g.
@@ -16,10 +14,10 @@
   ; (import (symlink-to-libfile-name)).
   
   (display (format "Downloading ~a ...\n" ski:trick))
-  (system (format "cd ~a; git clone https://github.com/arcfide/chez-srfi.git" ski:dir-resort))
+  (system (format "cd ~a; git clone https://github.com/arcfide/~a.git" ski:dir-resort ski:dist))
   
-  (current-directory (format "~a/chez-srfi" ski:dir-resort))
-  (load (format "~a/chez-srfi/link-dirs.chezscheme.sps" ski:dir-resort))
+  (current-directory (format "~a/~a" ski:dir-resort ski:dist))
+  (load (format "~a/~a/link-dirs.chezscheme.sps" ski:dir-resort ski:dist))
   
   (display (format "Linking ~a\n" ski:dist))
   (system (format "ln -sf ~a/~a ~a/~a" ski:dir-resort ski:dist ski:dir-tricks ski:trick))
