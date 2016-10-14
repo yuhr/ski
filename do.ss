@@ -26,4 +26,3 @@
     (load (format "~a/~a.ss" ski:dir-ski s))
     (ski:uninstall)
     (system (format "rm ~a/~a.ss" ski:dir-ski s))))
-

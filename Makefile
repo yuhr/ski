@@ -1,5 +1,4 @@
 
-
 DIRINSTALL	= ~/.ski
 DIRLINKS		= $(DIRINSTALL)/tricks
 DIRDISTS		= $(DIRINSTALL)/resort
@@ -11,4 +10,3 @@ install:
 
 uninstall:
 	rm -rf $(DIRINSTALL) $(DIRTRICKS) $(DIRDISTS) $(DIRREGIS)
-
