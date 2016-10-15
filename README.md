@@ -1,7 +1,7 @@
 # ski [WIP]
 A package manager for Chez Scheme. Currently supports Linux only.
 
-See registered libraries in the [skis](https://github.com/qothr/ski/tree/master/skies) directory.
+See registered libraries in the [skis](https://github.com/qothr/ski/tree/master/skis) directory.
 
 ## Install ski
 Download [ski.ss](https://github.com/qothr/ski/raw/master/ski.ss) and load it on repl. If you want to change the install directory, edit it before loading.
