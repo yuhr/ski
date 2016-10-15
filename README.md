@@ -16,4 +16,3 @@ Once you get `ski:bind`, you can `(import (library-name ...))` e.g. `(import (sr
 - search in registry
 - manage different versions of same library
 - update library
-- chez-gl support
