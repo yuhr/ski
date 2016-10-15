@@ -17,6 +17,13 @@
 
 (current-directory ski:install-directory)
 (system "wget https://github.com/qothr/ski/raw/master/do.ss")
+
 (load "do.ss")
 
-(display "ski OK\n")
+(display "Ski installed.\n")
+(display "Usage:\n")
+(display "\t(ski:bind 'registry-name) installs the registry-name package.\n")
+(display "\t(ski:unbind 'registry-name) uninstalls the registry-name package.\n")
+(display (format "You need (load \"~ado.ss\") to import libraries installed by ski.\n" ski:install-directory))
+(display "Have a nice ski.")
+

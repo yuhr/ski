@@ -3,7 +3,7 @@
 
 (define ski:dir-resort "~/.ski/resort")
 (define ski:dir-tricks "~/.ski/tricks")
-(define ski:dir-skies "~/.ski/skies")
+(define ski:dir-skies "~/.ski/skis")
 
 (library-directories `(,@(library-directories)
                        (,ski:dir-tricks . ,ski:dir-tricks)))
@@ -14,7 +14,7 @@
   (let ((s (if (symbol? ski)
                (symbol->string ski)
                ski)))
-    (system (format "cd ~a; wget https://github.com/qothr/ski/raw/master/skies/~a.ss"
+    (system (format "cd ~a; wget https://github.com/qothr/ski/raw/master/skis/~a.ss"
                     ski:dir-skies s))
     (load (format "~a/~a.ss" ski:dir-skies s))
     (ski:install)))

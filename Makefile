@@ -2,7 +2,7 @@
 DIRINSTALL	= ~/.ski
 DIRLINKS		= $(DIRINSTALL)/tricks
 DIRDISTS		= $(DIRINSTALL)/resort
-DIRREGIS		= $(DIRINSTALL)/boards
+DIRREGIS		= $(DIRINSTALL)/skis
 
 install:
 	mkdir -p {$(DIRINSTALL),$(DIRLINKS),$(DIRDISTS),$(DIRREGIS)}
