@@ -13,7 +13,7 @@
   ; (import (symlink-to-dir-name subdir-name libfile-name)) or simply you can
   ; (import (symlink-to-libfile-name)).
   
-  (display (format "Downloading ~a ...\n" ski:trick))
+  (display (format "Downloading ~a ...\n" ski:dist))
   (system (format "cd ~a; git clone https://github.com/arcfide/~a.git" ski:dir-resort ski:dist))
   
   (current-directory (format "~a/~a" ski:dir-resort ski:dist))
@@ -22,12 +22,12 @@
   (display (format "Linking ~a\n" ski:dist))
   (system (format "ln -sf ~a/~a ~a/~a" ski:dir-resort ski:dist ski:dir-tricks ski:trick))
   
-  (display (format "(~a) OK\n" ski:trick)))
+  (display (format "~a OK\n" ski:dist)))
 
 (define (ski:uninstall)
   ; cleanup the package's directory and the associated symlink.
 
-  (display (format "Uninking ~a\n" ski:trick))
+  (display (format "Uninking ~a\n" ski:dist))
   (system (format "unlink ~a/~a" ski:dir-tricks ski:trick))
   
   (display (format "Deleting ~a\n" ski:dist))
