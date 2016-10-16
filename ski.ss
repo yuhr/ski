@@ -3,15 +3,15 @@
 
 (define ski:install-directory "~/.ski/")
 (define ski:package-directory (string-append ski:install-directory "resort/"))
-(define ski:registory-directory (string-append ski:install-directory "skis/"))
+(define ski:registry-directory (string-append ski:install-directory "skis/"))
 (define ski:link-directory (string-append ski:install-directory "tricks/"))
 
 (unless (file-exists? ski:install-directory)
   (mkdir ski:install-directory))
 (unless (file-exists? ski:package-directory)
   (mkdir ski:package-directory))
-(unless (file-exists? ski:registory-directory)
-  (mkdir ski:registory-directory))
+(unless (file-exists? ski:registry-directory)
+  (mkdir ski:registry-directory))
 (unless (file-exists? ski:link-directory)
   (mkdir ski:link-directory))
 
