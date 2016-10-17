@@ -17,6 +17,7 @@
   (system (format "cd ~a; git clone https://github.com/qothr/~a.git" ski:dir-resort ski:dist))
   
   (display (format "Linking ~a\n" ski:dist))
+  (system (format "ln -sf ~a/~a/ ~a/~a" ski:dir-resort ski:dist ski:dir-tricks ski:trick))
   (system (format "ln -sf ~a/~a/vulkan.ss ~a/~a.ss" ski:dir-resort ski:dist ski:dir-tricks ski:trick))
   
   (display (format "~a OK\n" ski:dist)))
@@ -26,6 +27,7 @@
 
   (display (format "Uninking ~a\n" ski:dist))
   (system (format "unlink ~a/~a.ss" ski:dir-tricks ski:trick))
+  (system (format "unlink ~a/~a" ski:dir-tricks ski:trick))
   
   (display (format "Deleting ~a\n" ski:dist))
   (system (format "rm -rf ~a/~a" ski:dir-resort ski:dist))
