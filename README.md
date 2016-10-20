@@ -12,6 +12,7 @@ Repl `(load "~/.ski/do.ss")` and `(ski:bind 'registry-name)`. registry-name is t
 Once you get `ski:bind`, you can `(import (library-name ...))` e.g. `(import (srfi :13 strings))` everywhere, but you need to `(load "~/.ski/do.ss")` before it.
 
 ## TODO
+- compile library files
 - resolve dependencies
 - search in registry
 - manage different versions of same library
